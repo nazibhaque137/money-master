@@ -5,14 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Money Manager 14 Pro Max </title>
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 </head>
 
 
 <body>
     <!-- Header Starts -->
-    <h1>Money Manager 14 Pro Max</h1>
+    <h1 class="text-center">Money Manager 14 Pro Max</h1>
     <!-- Header Ends -->
+    <div class="container-fluid">
+        <!--Row with two equal columns-->
+        <div class="row">
+
+            <div class="col-md-6">
+                <img class="banner-img" src="./img/balance-calculator.jpg">
+            </div>
+
+            <div class="col-md-6">
+                <form id="balance-calculator">
+                    <div class="">
+                        <h5>Income</h5>
+                        <label for="income" class="form-label">Income</label>
+                        <div class=""> <input id="income" type="number" inputmode=”numeric”>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <h5>Expenses</h5>
+                        <label for="food-expense" class="form-label">Food</label>
+                        <div class=""> <input id="food-expense" type="number" inputmode=”numeric”>
+                        </div>
+
+                        <label for="rent-expense" class="form-label">Rent</label>
+                        <div class=""> <input id="rent-expense" type="number" inputmode=”numeric”>
+                        </div>
+
+                        <label for="clothes-expense" class="form-label">Clothes</label>
+                        <div class=""> <input id="clothes-expense" type="number" inputmode=”numeric”>
+                        </div>
+                    </div>
+                </form>
+
+
+                <div class="btn-wrapper"><button type="button" id="btnCalc" class="btn btn-primary btn-calculator"
+                        onclick="calculate();">Calculate</button></div>
+
+
+                <div class="results">
+                    <div class="row">
+                        <div class="total-expenses">
+                            <h5> Total Expenses: &nbsp;<span id="total_expenses"></span></h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="total-balance">
+                            <h5> Total Balance: &nbsp;<span id="total_balance"></span></h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 </body>
 

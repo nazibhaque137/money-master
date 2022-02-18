@@ -53,10 +53,15 @@ function calSavings() {
     var saveTotal = (incomeTotal * savePercent) / 100;
     sAmount.innerHTML = saveTotal;
     var remainingBalance = parseInt(cBalance.innerHTML) - saveTotal;
-    if (remainingBalance >= 0) {
-        rBalance.innerHTML = remainingBalance;
-    }
-    else {
-        alert('You do not have enough money remaining!');
+    if (saveTotal > 0) {
+        if (remainingBalance >= 0) {
+            rBalance.innerHTML = remainingBalance;
+        }
+        else {
+            alert('You do not have enough money remaining!');
+        }
+    } else {
+        alert('Enter Positive Numbers in the Savings field please...');
     }
 }
+
